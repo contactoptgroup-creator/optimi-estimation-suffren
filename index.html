@@ -1140,6 +1140,8 @@
         }
 
         /* ===== RESPONSIVE ===== */
+
+        /* Large tablets / small laptops */
         @media (max-width: 1000px) {
             .strategy-visual {
                 grid-template-columns: 1fr;
@@ -1149,11 +1151,31 @@
             .strategy-plus {
                 font-size: 32px;
             }
+
+            .strategy-days {
+                font-size: 56px;
+            }
         }
 
+        /* Tablets */
         @media (max-width: 900px) {
             .slide {
-                padding: 40px;
+                padding: 30px 24px 100px;
+            }
+
+            .logo {
+                top: 16px;
+                left: 16px;
+            }
+
+            .logo-text {
+                font-size: 14px;
+            }
+
+            .slide-counter {
+                top: 16px;
+                right: 16px;
+                font-size: 11px;
             }
 
             .card-grid,
@@ -1163,15 +1185,22 @@
 
             .stats-grid {
                 grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
             }
 
             .season-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
 
             .timeline {
                 flex-direction: column;
                 align-items: center;
+                gap: 24px;
+            }
+
+            .timeline-item {
+                padding: 0 20px;
             }
 
             .timeline-item:not(:last-child)::after {
@@ -1181,6 +1210,7 @@
             .property-badge {
                 flex-direction: column;
                 gap: 12px;
+                padding: 16px 24px;
             }
 
             .contact-info {
@@ -1192,6 +1222,7 @@
                 grid-template-columns: 1fr;
                 gap: 8px;
                 text-align: center;
+                padding: 12px 0;
             }
 
             .timeline-revenue {
@@ -1200,16 +1231,462 @@
 
             .comparison-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .one-liner-box {
+                padding: 32px 24px;
+            }
+
+            .one-liner-box p {
+                font-size: clamp(18px, 4vw, 28px);
+            }
+
+            .year-card {
+                padding: 24px;
+            }
+
+            .year-value {
+                font-size: 40px;
+            }
+
+            .cta-button {
+                padding: 16px 32px;
+                font-size: 16px;
+            }
+
+            .location-highlight {
+                padding: 16px 24px;
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .location-text {
+                text-align: center;
+            }
+
+            .guaranteed-badge {
+                padding: 12px 24px;
+                font-size: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
             }
         }
 
+        /* Mobile phones */
         @media (max-width: 640px) {
+            .slide {
+                padding: 20px 16px 90px;
+            }
+
+            .logo {
+                top: 12px;
+                left: 12px;
+            }
+
+            .logo-text {
+                font-size: 12px;
+                letter-spacing: 0.1em;
+            }
+
+            .slide-counter {
+                top: 12px;
+                right: 12px;
+                font-size: 10px;
+            }
+
+            .tag {
+                padding: 6px 14px;
+                font-size: 10px;
+                margin-bottom: 16px;
+            }
+
+            h1 {
+                font-size: clamp(26px, 7vw, 40px);
+                margin-bottom: 16px;
+            }
+
+            h2 {
+                font-size: clamp(20px, 5vw, 30px);
+            }
+
+            h3 {
+                font-size: clamp(16px, 4vw, 22px);
+            }
+
+            .hero-title {
+                font-size: clamp(32px, 9vw, 60px);
+                margin-bottom: 20px;
+            }
+
+            .lead {
+                font-size: 14px;
+                margin-bottom: 24px;
+                line-height: 1.6;
+            }
+
             .stats-grid {
                 grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .stat-card {
+                padding: 20px 16px;
+            }
+
+            .stat-value {
+                font-size: clamp(28px, 8vw, 40px);
+            }
+
+            .stat-label {
+                font-size: 11px;
             }
 
             .nav-fixed {
-                bottom: 20px;
+                bottom: 16px;
+                gap: 12px;
+            }
+
+            .nav-btn {
+                width: 48px;
+                height: 48px;
+                font-size: 18px;
+            }
+
+            .strategy-visual {
+                gap: 12px;
+            }
+
+            .strategy-box {
+                padding: 24px 16px;
+            }
+
+            .strategy-days {
+                font-size: 48px;
+            }
+
+            .strategy-label {
+                font-size: 12px;
+            }
+
+            .strategy-revenue {
+                font-size: 18px;
+            }
+
+            .strategy-plus {
+                font-size: 28px;
+            }
+
+            .season-card {
+                padding: 16px;
+            }
+
+            .season-price {
+                font-size: 28px;
+            }
+
+            .season-events {
+                font-size: 11px;
+            }
+
+            .card {
+                padding: 20px 16px;
+            }
+
+            .card-grid {
+                gap: 16px;
+            }
+
+            .services-grid {
+                gap: 12px;
+            }
+
+            .service-item {
+                padding: 16px;
+                gap: 12px;
+            }
+
+            .service-icon {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .service-title {
+                font-size: 14px;
+            }
+
+            .service-desc {
+                font-size: 12px;
+            }
+
+            .year-card {
+                padding: 20px 16px;
+            }
+
+            .year-value {
+                font-size: 32px;
+            }
+
+            .year-monthly {
+                font-size: 16px;
+            }
+
+            .year-badge {
+                top: 12px;
+                right: 12px;
+                padding: 4px 12px;
+                font-size: 9px;
+            }
+
+            .breakdown-item {
+                padding: 10px 0;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .breakdown-value {
+                font-size: 16px;
+            }
+
+            .timeline-enhanced {
+                margin-top: 20px;
+            }
+
+            .timeline-month {
+                padding: 10px 0;
+            }
+
+            .timeline-month-name {
+                font-size: 14px;
+            }
+
+            .timeline-bar-container {
+                height: 28px;
+            }
+
+            .timeline-bar {
+                font-size: 9px;
+            }
+
+            .timeline-revenue {
+                font-size: 13px;
+            }
+
+            .comparison-card {
+                padding: 20px 16px;
+            }
+
+            .comparison-value {
+                font-size: 26px;
+            }
+
+            .comparison-annual {
+                font-size: 12px;
+            }
+
+            .one-liner-box {
+                padding: 24px 16px;
+                margin-top: 24px;
+            }
+
+            .timeline-number {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            .timeline-text {
+                max-width: 140px;
+            }
+
+            .timeline-title {
+                font-size: 14px;
+            }
+
+            .timeline-desc {
+                font-size: 12px;
+            }
+
+            .cta-button {
+                padding: 14px 28px;
+                font-size: 15px;
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+
+            .contact-info {
+                gap: 12px;
+            }
+
+            .contact-item {
+                font-size: 13px;
+            }
+
+            .contact-icon {
+                width: 36px;
+                height: 36px;
+                font-size: 16px;
+            }
+
+            .property-badge {
+                padding: 12px 16px;
+                border-radius: 16px;
+            }
+
+            .property-badge-item {
+                font-size: 13px;
+            }
+
+            .location-highlight {
+                padding: 14px 16px;
+                border-radius: 14px;
+                gap: 12px;
+            }
+
+            .location-icon {
+                font-size: 24px;
+            }
+
+            .location-name {
+                font-size: 16px;
+            }
+
+            .location-detail {
+                font-size: 12px;
+            }
+
+            .guaranteed-badge {
+                padding: 10px 16px;
+                font-size: 13px;
+                margin-top: 20px;
+            }
+
+            .guaranteed-badge svg {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        /* Extra small phones */
+        @media (max-width: 380px) {
+            .slide {
+                padding: 16px 12px 85px;
+            }
+
+            .hero-title {
+                font-size: clamp(28px, 8vw, 48px);
+            }
+
+            h1 {
+                font-size: clamp(22px, 6vw, 32px);
+            }
+
+            .lead {
+                font-size: 13px;
+            }
+
+            .strategy-days {
+                font-size: 40px;
+            }
+
+            .stat-value {
+                font-size: clamp(24px, 7vw, 32px);
+            }
+
+            .year-value {
+                font-size: 28px;
+            }
+
+            .season-price {
+                font-size: 24px;
+            }
+
+            .nav-btn {
+                width: 44px;
+                height: 44px;
+            }
+
+            .cta-button {
+                padding: 12px 24px;
+                font-size: 14px;
+            }
+        }
+
+        /* Landscape mode on phones */
+        @media (max-height: 500px) and (orientation: landscape) {
+            .slide {
+                padding: 16px 40px 70px;
+                justify-content: flex-start;
+                overflow-y: auto;
+            }
+
+            .slide-content {
+                padding-top: 40px;
+            }
+
+            .hero-title {
+                font-size: clamp(28px, 5vw, 48px);
+            }
+
+            h1 {
+                font-size: clamp(22px, 4vw, 36px);
+            }
+
+            .nav-fixed {
+                bottom: 10px;
+            }
+
+            .nav-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .logo {
+                top: 10px;
+            }
+
+            .slide-counter {
+                top: 10px;
+            }
+        }
+
+        /* High DPI / Retina displays */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .progress-bar {
+                height: 2px;
+            }
+        }
+
+        /* Touch device optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .nav-btn {
+                min-width: 48px;
+                min-height: 48px;
+            }
+
+            .cta-button {
+                min-height: 48px;
+            }
+
+            .stat-card:hover,
+            .card:hover,
+            .service-item:hover,
+            .season-card:hover,
+            .timeline-month:hover {
+                transform: none;
+            }
+        }
+
+        /* Reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
             }
         }
     </style>

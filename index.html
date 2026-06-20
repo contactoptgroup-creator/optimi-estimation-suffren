@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, maximum-scale=1.0, user-scalable=no">
     <title>Strategie de Revenus 2026-2027 | 21 Avenue de Suffren - Paris 7e | OPT IM GROUP</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -942,6 +942,7 @@
         .nav-fixed {
             position: fixed;
             bottom: 40px;
+            bottom: calc(40px + env(safe-area-inset-bottom, 0px));
             left: 50%;
             transform: translateX(-50%);
             display: flex;
@@ -950,11 +951,13 @@
         }
 
         .nav-btn {
-            width: 52px;
-            height: 52px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
-            background: var(--bg-2);
-            border: 1px solid var(--border);
+            background: rgba(17, 17, 20, 0.95);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--border-2);
             color: var(--text);
             cursor: pointer;
             display: flex;
@@ -962,6 +965,7 @@
             justify-content: center;
             transition: all 0.3s ease;
             font-size: 20px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         }
 
         .nav-btn:hover {
@@ -971,15 +975,25 @@
             transform: scale(1.05);
         }
 
+        .nav-btn:active {
+            transform: scale(0.95);
+            background: var(--bg-4);
+        }
+
         .nav-btn:disabled {
             opacity: 0.3;
             cursor: not-allowed;
+        }
+
+        .nav-btn:disabled:active {
+            transform: none;
         }
 
         /* ===== PROGRESS BAR ===== */
         .progress-bar {
             position: fixed;
             bottom: 0;
+            bottom: env(safe-area-inset-bottom, 0px);
             left: 0;
             height: 3px;
             background: linear-gradient(90deg, var(--accent), var(--accent-2), var(--green));
@@ -1277,12 +1291,18 @@
         /* Mobile phones */
         @media (max-width: 640px) {
             .slide {
-                padding: 20px 16px 90px;
+                padding: 20px 16px 100px;
+                padding-top: calc(20px + env(safe-area-inset-top, 0px));
+                padding-bottom: calc(100px + env(safe-area-inset-bottom, 0px));
+                padding-left: calc(16px + env(safe-area-inset-left, 0px));
+                padding-right: calc(16px + env(safe-area-inset-right, 0px));
             }
 
             .logo {
                 top: 12px;
+                top: calc(12px + env(safe-area-inset-top, 0px));
                 left: 12px;
+                left: calc(12px + env(safe-area-inset-left, 0px));
             }
 
             .logo-text {
@@ -1292,7 +1312,9 @@
 
             .slide-counter {
                 top: 12px;
+                top: calc(12px + env(safe-area-inset-top, 0px));
                 right: 12px;
+                right: calc(12px + env(safe-area-inset-right, 0px));
                 font-size: 10px;
             }
 
@@ -1303,54 +1325,55 @@
             }
 
             h1 {
-                font-size: clamp(26px, 7vw, 40px);
-                margin-bottom: 16px;
+                font-size: clamp(24px, 6.5vw, 38px);
+                margin-bottom: 14px;
             }
 
             h2 {
-                font-size: clamp(20px, 5vw, 30px);
+                font-size: clamp(18px, 5vw, 28px);
             }
 
             h3 {
-                font-size: clamp(16px, 4vw, 22px);
+                font-size: clamp(15px, 4vw, 20px);
             }
 
             .hero-title {
-                font-size: clamp(32px, 9vw, 60px);
-                margin-bottom: 20px;
+                font-size: clamp(28px, 8vw, 52px);
+                margin-bottom: 16px;
             }
 
             .lead {
                 font-size: 14px;
-                margin-bottom: 24px;
+                margin-bottom: 20px;
                 line-height: 1.6;
             }
 
             .stats-grid {
                 grid-template-columns: 1fr;
-                gap: 12px;
+                gap: 10px;
             }
 
             .stat-card {
-                padding: 20px 16px;
+                padding: 18px 14px;
             }
 
             .stat-value {
-                font-size: clamp(28px, 8vw, 40px);
+                font-size: clamp(26px, 7vw, 36px);
             }
 
             .stat-label {
-                font-size: 11px;
+                font-size: 10px;
             }
 
             .nav-fixed {
-                bottom: 16px;
-                gap: 12px;
+                bottom: 20px;
+                bottom: calc(20px + env(safe-area-inset-bottom, 0px));
+                gap: 16px;
             }
 
             .nav-btn {
-                width: 48px;
-                height: 48px;
+                width: 52px;
+                height: 52px;
                 font-size: 18px;
             }
 
@@ -1619,38 +1642,83 @@
         /* Landscape mode on phones */
         @media (max-height: 500px) and (orientation: landscape) {
             .slide {
-                padding: 16px 40px 70px;
+                padding: 12px 60px 80px;
+                padding-left: calc(60px + env(safe-area-inset-left, 0px));
+                padding-right: calc(60px + env(safe-area-inset-right, 0px));
+                padding-bottom: calc(80px + env(safe-area-inset-bottom, 0px));
                 justify-content: flex-start;
                 overflow-y: auto;
+                -webkit-overflow-scrolling: touch;
             }
 
             .slide-content {
-                padding-top: 40px;
+                padding-top: 30px;
+                padding-bottom: 20px;
             }
 
             .hero-title {
-                font-size: clamp(28px, 5vw, 48px);
+                font-size: clamp(24px, 5vw, 40px);
             }
 
             h1 {
-                font-size: clamp(22px, 4vw, 36px);
+                font-size: clamp(20px, 4vw, 32px);
+            }
+
+            h2 {
+                font-size: clamp(16px, 3vw, 24px);
+            }
+
+            .lead {
+                font-size: 13px;
+                margin-bottom: 16px;
             }
 
             .nav-fixed {
-                bottom: 10px;
+                bottom: 8px;
+                bottom: calc(8px + env(safe-area-inset-bottom, 0px));
             }
 
             .nav-btn {
-                width: 40px;
-                height: 40px;
+                width: 44px;
+                height: 44px;
             }
 
             .logo {
-                top: 10px;
+                top: 8px;
+                left: calc(12px + env(safe-area-inset-left, 0px));
             }
 
             .slide-counter {
-                top: 10px;
+                top: 8px;
+                right: calc(12px + env(safe-area-inset-right, 0px));
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 8px;
+            }
+
+            .stat-card {
+                padding: 12px 10px;
+            }
+
+            .stat-value {
+                font-size: clamp(20px, 5vw, 28px);
+            }
+
+            .strategy-visual {
+                grid-template-columns: 1fr 40px 1fr;
+                gap: 8px;
+            }
+
+            .strategy-days {
+                font-size: 36px;
+            }
+
+            .tag {
+                padding: 4px 12px;
+                font-size: 9px;
+                margin-bottom: 12px;
             }
         }
 
@@ -2373,37 +2441,59 @@
             }
         });
 
+        // Click navigation (desktop only - mobile uses swipe)
         document.addEventListener('click', (e) => {
-            if (e.target.closest('.nav-btn') || e.target.closest('.cta-button') || e.target.closest('a')) return;
+            // Ignore clicks on interactive elements
+            if (e.target.closest('.nav-btn') || e.target.closest('.cta-button') || e.target.closest('a') || e.target.closest('button')) return;
+
+            // Only enable click navigation on non-touch devices or larger screens
+            const isTouchDevice = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            if (isTouchDevice && window.innerWidth < 768) return;
 
             const x = e.clientX;
             const width = window.innerWidth;
 
-            if (x > width * 0.6) {
+            // Larger click zones: left 35%, right 35%, center 30% (dead zone for reading)
+            if (x > width * 0.65) {
                 nextSlide();
-            } else if (x < width * 0.4) {
+            } else if (x < width * 0.35) {
                 prevSlide();
             }
         });
 
+        // Touch/swipe navigation
         let touchStartX = 0;
+        let touchStartY = 0;
         let touchEndX = 0;
+        let touchEndY = 0;
+        let touchStartTime = 0;
 
         document.addEventListener('touchstart', (e) => {
             touchStartX = e.changedTouches[0].screenX;
-        });
+            touchStartY = e.changedTouches[0].screenY;
+            touchStartTime = Date.now();
+        }, { passive: true });
 
         document.addEventListener('touchend', (e) => {
             touchEndX = e.changedTouches[0].screenX;
+            touchEndY = e.changedTouches[0].screenY;
             handleSwipe();
-        });
+        }, { passive: true });
 
         function handleSwipe() {
-            const threshold = 50;
-            const diff = touchStartX - touchEndX;
+            const horizontalDiff = touchStartX - touchEndX;
+            const verticalDiff = Math.abs(touchStartY - touchEndY);
+            const timeDiff = Date.now() - touchStartTime;
 
-            if (Math.abs(diff) > threshold) {
-                if (diff > 0) {
+            // Swipe threshold: 40px for better responsiveness
+            // Only trigger if horizontal swipe is dominant (not vertical scroll)
+            // And swipe was quick enough (under 500ms)
+            const threshold = 40;
+
+            if (Math.abs(horizontalDiff) > threshold &&
+                Math.abs(horizontalDiff) > verticalDiff * 1.5 &&
+                timeDiff < 500) {
+                if (horizontalDiff > 0) {
                     nextSlide();
                 } else {
                     prevSlide();

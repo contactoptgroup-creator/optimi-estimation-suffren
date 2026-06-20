@@ -1,0 +1,1673 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strategie de Revenus 2026-2027 | 21 Avenue de Suffren - Paris 7e | OPT IM GROUP</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #070810;
+            --bg-secondary: #0f1119;
+            --bg-tertiary: #131623;
+            --text-primary: #f4f4f5;
+            --text-secondary: #a1a1aa;
+            --gold: #d4af37;
+            --gold-light: #e8c547;
+            --blue: #2563eb;
+            --blue-light: #3b82f6;
+            --green: #22c55e;
+            --green-light: #4ade80;
+            --violet: #a78bfa;
+            --orange: #f97316;
+            --red: #ef4444;
+            --cyan: #06b6d4;
+            --premium: #9333ea;
+            --premium-light: #a855f7;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.025;
+            z-index: 1000;
+            pointer-events: none;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+        }
+
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 80px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s cubic-bezier(0.2, 0.8, 0.2, 1), visibility 0.6s;
+            background: var(--bg-primary);
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slide-content {
+            max-width: 1300px;
+            width: 100%;
+            text-align: center;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes shimmerText {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+
+        @keyframes glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(34, 197, 94, 0.6); }
+        }
+
+        @keyframes goldGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(212, 175, 55, 0.4); }
+            50% { box-shadow: 0 0 60px rgba(212, 175, 55, 0.7); }
+        }
+
+        @keyframes premiumGlow {
+            0%, 100% { box-shadow: 0 0 30px rgba(147, 51, 234, 0.4); }
+            50% { box-shadow: 0 0 60px rgba(147, 51, 234, 0.7); }
+        }
+
+        .slide.active .animate-1 { animation: fadeInUp 0.8s ease forwards; animation-delay: 0.1s; opacity: 0; }
+        .slide.active .animate-2 { animation: fadeInUp 0.8s ease forwards; animation-delay: 0.2s; opacity: 0; }
+        .slide.active .animate-3 { animation: fadeInUp 0.8s ease forwards; animation-delay: 0.3s; opacity: 0; }
+        .slide.active .animate-4 { animation: fadeInUp 0.8s ease forwards; animation-delay: 0.4s; opacity: 0; }
+        .slide.active .animate-5 { animation: fadeInUp 0.8s ease forwards; animation-delay: 0.5s; opacity: 0; }
+        .slide.active .animate-6 { animation: fadeInUp 0.8s ease forwards; animation-delay: 0.6s; opacity: 0; }
+
+        .badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: linear-gradient(135deg, rgba(212, 175, 55, 0.15), rgba(212, 175, 55, 0.05));
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 100px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--gold);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 24px;
+        }
+
+        .badge-green {
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05));
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            color: var(--green);
+        }
+
+        .badge-blue {
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.15), rgba(37, 99, 235, 0.05));
+            border: 1px solid rgba(37, 99, 235, 0.3);
+            color: var(--blue-light);
+        }
+
+        .badge-premium {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(147, 51, 234, 0.05));
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            color: var(--premium-light);
+        }
+
+        .hero-title {
+            font-size: clamp(42px, 6vw, 80px);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 24px;
+            background: linear-gradient(135deg, var(--text-primary) 0%, var(--gold) 50%, var(--text-primary) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: shimmerText 5s linear infinite;
+        }
+
+        h1 {
+            font-size: clamp(32px, 4vw, 56px);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+        }
+
+        h2 {
+            font-size: clamp(24px, 3vw, 40px);
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 16px;
+        }
+
+        h3 {
+            font-size: clamp(18px, 2vw, 28px);
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            font-size: clamp(18px, 2vw, 24px);
+            color: var(--text-secondary);
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .highlight { color: var(--gold); font-weight: 700; }
+        .highlight-green { color: var(--green); font-weight: 700; }
+        .highlight-blue { color: var(--blue-light); font-weight: 700; }
+        .highlight-orange { color: var(--orange); font-weight: 700; }
+        .highlight-cyan { color: var(--cyan); font-weight: 700; }
+        .highlight-premium { color: var(--premium-light); font-weight: 700; }
+
+        .card {
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+            text-align: left;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            border-radius: 20px;
+            padding: 32px 24px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light), var(--gold));
+        }
+
+        .stat-card.green::before {
+            background: linear-gradient(90deg, var(--green), var(--green-light), var(--green));
+        }
+
+        .stat-card.blue::before {
+            background: linear-gradient(90deg, var(--blue), var(--blue-light), var(--blue));
+        }
+
+        .stat-card.premium::before {
+            background: linear-gradient(90deg, var(--premium), var(--premium-light), var(--premium));
+        }
+
+        .stat-value {
+            font-size: clamp(32px, 4vw, 56px);
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+            margin-bottom: 8px;
+            text-shadow: 0 0 40px rgba(212, 175, 55, 0.4);
+        }
+
+        .stat-value.green { color: var(--green); text-shadow: 0 0 40px rgba(34, 197, 94, 0.4); }
+        .stat-value.blue { color: var(--blue-light); text-shadow: 0 0 40px rgba(37, 99, 235, 0.4); }
+        .stat-value.premium { color: var(--premium-light); text-shadow: 0 0 40px rgba(147, 51, 234, 0.4); }
+
+        .stat-label {
+            font-size: 14px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        /* Strategy Visual */
+        .strategy-visual {
+            display: grid;
+            grid-template-columns: 1fr 80px 1fr;
+            gap: 20px;
+            align-items: center;
+            margin-top: 40px;
+        }
+
+        .strategy-box {
+            padding: 32px;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .strategy-box.airbnb {
+            background: linear-gradient(135deg, rgba(249, 115, 22, 0.15), rgba(249, 115, 22, 0.05));
+            border: 2px solid var(--orange);
+        }
+
+        .strategy-box.bail {
+            background: linear-gradient(135deg, rgba(6, 182, 212, 0.15), rgba(6, 182, 212, 0.05));
+            border: 2px solid var(--cyan);
+        }
+
+        .strategy-plus {
+            font-size: 48px;
+            font-weight: 900;
+            color: var(--gold);
+        }
+
+        .strategy-days {
+            font-size: 64px;
+            font-weight: 900;
+            line-height: 1;
+        }
+
+        .strategy-days.orange { color: var(--orange); }
+        .strategy-days.cyan { color: var(--cyan); }
+
+        .strategy-label {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        .strategy-revenue {
+            font-size: 28px;
+            font-weight: 800;
+            margin-top: 16px;
+        }
+
+        /* Year projection cards */
+        .year-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .year-card.featured {
+            border: 2px solid var(--gold);
+            animation: goldGlow 3s ease-in-out infinite;
+        }
+
+        .year-card.premium-featured {
+            border: 2px solid var(--premium);
+            animation: premiumGlow 3s ease-in-out infinite;
+        }
+
+        .year-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 6px 16px;
+            background: var(--gold);
+            color: var(--bg-primary);
+            font-size: 12px;
+            font-weight: 700;
+            border-radius: 100px;
+            letter-spacing: 1px;
+        }
+
+        .year-badge.premium {
+            background: linear-gradient(135deg, var(--premium), var(--premium-light));
+        }
+
+        .year-title {
+            font-size: 20px;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .year-value {
+            font-size: 56px;
+            font-weight: 900;
+            color: var(--gold);
+            line-height: 1;
+        }
+
+        .year-monthly {
+            font-size: 24px;
+            color: var(--green);
+            margin-top: 8px;
+            font-weight: 700;
+        }
+
+        .year-breakdown {
+            margin-top: 24px;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .breakdown-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .breakdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .breakdown-label {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 15px;
+        }
+
+        .breakdown-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .breakdown-dot.orange { background: var(--orange); }
+        .breakdown-dot.cyan { background: var(--cyan); }
+
+        .breakdown-value {
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        /* Timeline enhanced */
+        .timeline-enhanced {
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            margin-top: 40px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .timeline-month {
+            display: grid;
+            grid-template-columns: 120px 1fr 120px;
+            align-items: center;
+            gap: 20px;
+            padding: 16px 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .timeline-month-name {
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        .timeline-bar-container {
+            height: 32px;
+            background: var(--bg-tertiary);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+        }
+
+        .timeline-bar {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--bg-primary);
+        }
+
+        .timeline-bar.airbnb {
+            background: linear-gradient(90deg, var(--orange), #fb923c);
+        }
+
+        .timeline-bar.bail {
+            background: linear-gradient(90deg, var(--cyan), #22d3ee);
+        }
+
+        .timeline-revenue {
+            font-weight: 700;
+            text-align: right;
+            font-size: 15px;
+        }
+
+        /* Services grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            text-align: left;
+        }
+
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, rgba(37, 99, 235, 0.2), rgba(37, 99, 235, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+
+        .service-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .service-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, var(--gold), var(--gold-light));
+            color: var(--bg-primary);
+            font-size: 18px;
+            font-weight: 700;
+            border-radius: 100px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin-top: 32px;
+            box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 15px 40px rgba(212, 175, 55, 0.4);
+        }
+
+        /* Contact info */
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-secondary);
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            background: var(--bg-tertiary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+        }
+
+        /* Navigation */
+        .nav-fixed {
+            position: fixed;
+            bottom: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 16px;
+            z-index: 100;
+        }
+
+        .nav-btn {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: var(--bg-secondary);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            font-size: 20px;
+        }
+
+        .nav-btn:hover {
+            background: var(--bg-tertiary);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+
+        .nav-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light));
+            transition: width 0.3s ease;
+            z-index: 100;
+        }
+
+        /* Logo */
+        .logo {
+            position: fixed;
+            top: 32px;
+            left: 40px;
+            z-index: 100;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 20px;
+            color: var(--gold);
+            letter-spacing: 2px;
+        }
+
+        /* Slide counter */
+        .slide-counter {
+            position: fixed;
+            top: 32px;
+            right: 40px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 14px;
+            color: var(--text-secondary);
+            z-index: 100;
+        }
+
+        .slide-counter span {
+            color: var(--gold);
+            font-weight: 600;
+        }
+
+        /* Property info badge */
+        .property-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 24px;
+            padding: 16px 32px;
+            background: var(--bg-secondary);
+            border-radius: 100px;
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            margin-bottom: 32px;
+        }
+
+        .property-badge-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+        }
+
+        .property-badge-item strong {
+            color: var(--premium-light);
+        }
+
+        /* Screenshot frame */
+        .screenshot-frame {
+            margin-top: 32px;
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            border: 2px solid var(--green);
+            animation: glow 3s ease-in-out infinite;
+        }
+
+        .screenshot-frame::before {
+            content: 'DONNEES REELLES - 93 Avenue Kleber, Paris 16e (56 m2)';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, var(--green), var(--green-light));
+            color: var(--bg-primary);
+            padding: 10px 20px;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            z-index: 10;
+        }
+
+        .screenshot-frame img {
+            width: 100%;
+            display: block;
+            margin-top: 0;
+        }
+
+        .screenshot-caption {
+            background: var(--bg-tertiary);
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+
+        .screenshot-stat {
+            text-align: center;
+        }
+
+        .screenshot-stat-value {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--green);
+        }
+
+        .screenshot-stat-label {
+            font-size: 12px;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Guaranteed badge */
+        .guaranteed-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 16px 32px;
+            background: linear-gradient(135deg, rgba(34, 197, 94, 0.2), rgba(34, 197, 94, 0.1));
+            border: 2px solid var(--green);
+            border-radius: 100px;
+            font-size: 18px;
+            font-weight: 700;
+            color: var(--green);
+            margin-top: 32px;
+            animation: glow 2s ease-in-out infinite;
+        }
+
+        /* Big number display */
+        .big-number {
+            font-size: clamp(60px, 10vw, 120px);
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--green), var(--green-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .big-number-label {
+            font-size: 24px;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+
+        /* Timeline steps */
+        .timeline {
+            display: flex;
+            justify-content: center;
+            gap: 0;
+            margin-top: 48px;
+            flex-wrap: wrap;
+        }
+
+        .timeline-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            padding: 0 40px;
+        }
+
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 24px;
+            right: -20px;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, var(--blue), var(--blue-light));
+        }
+
+        .timeline-number {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--blue), var(--blue-light));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 0 30px rgba(37, 99, 235, 0.4);
+        }
+
+        .timeline-text {
+            text-align: center;
+            max-width: 160px;
+        }
+
+        .timeline-title {
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .timeline-desc {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Location highlight */
+        .location-highlight {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin: 24px 0;
+            padding: 20px 40px;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(147, 51, 234, 0.05));
+            border: 1px solid rgba(147, 51, 234, 0.3);
+            border-radius: 16px;
+        }
+
+        .location-icon {
+            font-size: 32px;
+        }
+
+        .location-text {
+            text-align: left;
+        }
+
+        .location-name {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--premium-light);
+        }
+
+        .location-detail {
+            font-size: 14px;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive */
+        @media (max-width: 1000px) {
+            .strategy-visual {
+                grid-template-columns: 1fr;
+                gap: 16px;
+            }
+
+            .strategy-plus {
+                font-size: 32px;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .slide {
+                padding: 40px;
+            }
+
+            .card-grid,
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .timeline {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .timeline-item:not(:last-child)::after {
+                display: none;
+            }
+
+            .property-badge {
+                flex-direction: column;
+                gap: 12px;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .timeline-month {
+                grid-template-columns: 1fr;
+                gap: 8px;
+                text-align: center;
+            }
+
+            .timeline-revenue {
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-fixed {
+                bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Logo -->
+    <div class="logo">
+        <span class="logo-text">OPT IM GROUP</span>
+    </div>
+
+    <!-- Slide counter -->
+    <div class="slide-counter">
+        <span id="currentSlide">01</span> / <span id="totalSlides">14</span>
+    </div>
+
+    <!-- Progress bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Presentation -->
+    <div class="presentation">
+
+        <!-- Slide 1: Hero -->
+        <div class="slide active" data-slide="1">
+            <div class="slide-content">
+                <span class="badge badge-premium animate-1">Strategie de Revenus 2026-2027</span>
+                <h1 class="hero-title animate-2">Votre Appartement<br>Avenue de Suffren</h1>
+                <div class="property-badge animate-3">
+                    <div class="property-badge-item">
+                        <span>Surface:</span>
+                        <strong>110 m2 / 1,184 sqft</strong>
+                    </div>
+                    <div class="property-badge-item">
+                        <span>Type:</span>
+                        <strong>2 Suites avec SdB</strong>
+                    </div>
+                    <div class="property-badge-item">
+                        <span>Standing:</span>
+                        <strong>Haut de Gamme</strong>
+                    </div>
+                </div>
+                <div class="location-highlight animate-4">
+                    <span class="location-icon">🗼</span>
+                    <div class="location-text">
+                        <div class="location-name">21 Avenue de Suffren - Paris 7e</div>
+                        <div class="location-detail">Vue Tour Eiffel - Quartier Champ de Mars</div>
+                    </div>
+                </div>
+                <p class="subtitle animate-5">
+                    Suite a notre echange, voici votre <span class="highlight">projection de revenus detaillee</span><br>
+                    avec notre strategie mixte optimisee <span class="highlight-green">Airbnb 90 jours + Bail Mobilite</span>.
+                </p>
+                <div class="guaranteed-badge animate-6">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    Objectif: 10,800 EUR Net pendant les mois Airbnb
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: The Mixed Strategy Explained -->
+        <div class="slide" data-slide="2">
+            <div class="slide-content">
+                <span class="badge animate-1">La Strategie</span>
+                <h1 class="animate-2">Modele Hybride de <span class="highlight">Revenus</span></h1>
+                <p class="subtitle animate-3">
+                    Combiner le meilleur des deux mondes pour maximiser vos rendements dans le respect de la reglementation parisienne
+                </p>
+                <div class="strategy-visual animate-4">
+                    <div class="strategy-box airbnb">
+                        <div class="strategy-days orange">90</div>
+                        <div class="strategy-label">Jours Airbnb / An</div>
+                        <div class="strategy-revenue" style="color: var(--orange);">Haute Saison Uniquement</div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 14px;">
+                            Tarifs premium pendant les pics de demande<br>
+                            (Fashion Week, JO, Evenements, Printemps/Automne)
+                        </p>
+                    </div>
+                    <div class="strategy-plus">+</div>
+                    <div class="strategy-box bail">
+                        <div class="strategy-days cyan">275</div>
+                        <div class="strategy-label">Jours Bail Mobilite / An</div>
+                        <div class="strategy-revenue" style="color: var(--cyan);">4,800 EUR / mois</div>
+                        <p style="color: var(--text-secondary); margin-top: 12px; font-size: 14px;">
+                            Cadres en mobilite, expatries<br>
+                            Sejours de 1 a 10 mois, revenus stables
+                        </p>
+                    </div>
+                </div>
+                <p class="animate-5" style="margin-top: 40px; color: var(--text-secondary);">
+                    La reglementation parisienne autorise <strong style="color: var(--gold);">90 jours maximum</strong> de location courte duree par an.<br>
+                    Nous maximisons chaque jour de maniere strategique.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 3: Our Expertise -->
+        <div class="slide" data-slide="3">
+            <div class="slide-content">
+                <span class="badge animate-1">Notre Expertise</span>
+                <h1 class="animate-2">Resultats <span class="highlight">Prouves</span></h1>
+                <p class="subtitle animate-3">
+                    Nos chiffres parlent d'eux-memes
+                </p>
+                <div class="stats-grid">
+                    <div class="stat-card animate-4">
+                        <div class="stat-value">200+</div>
+                        <div class="stat-label">Proprietes Gerees</div>
+                    </div>
+                    <div class="stat-card animate-5">
+                        <div class="stat-value">30-40%</div>
+                        <div class="stat-label">Revenus Superieurs au Marche</div>
+                    </div>
+                    <div class="stat-card animate-6">
+                        <div class="stat-value">70-85%</div>
+                        <div class="stat-label">Taux d'Occupation</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Live Case Study -->
+        <div class="slide" data-slide="4">
+            <div class="slide-content">
+                <span class="badge badge-green animate-1">Etude de Cas Reelle</span>
+                <h1 class="animate-2">Bien Comparable - <span class="highlight-green">Resultats en Direct</span></h1>
+                <p class="subtitle animate-3">
+                    Performance 2026 reelle d'un appartement de 56 m2 que nous gerons Avenue Kleber (Paris 16e)
+                </p>
+                <div class="screenshot-frame animate-4">
+                    <img src="kleber-results.png" alt="Donnees reelles de revenus 93 Avenue Kleber Paris">
+                    <div class="screenshot-caption">
+                        <div class="screenshot-stat">
+                            <div class="screenshot-stat-value">75,752 EUR</div>
+                            <div class="screenshot-stat-label">Revenu Net Annuel</div>
+                        </div>
+                        <div class="screenshot-stat">
+                            <div class="screenshot-stat-value">242</div>
+                            <div class="screenshot-stat-label">Nuits Reservees</div>
+                        </div>
+                        <div class="screenshot-stat">
+                            <div class="screenshot-stat-value">66.3%</div>
+                            <div class="screenshot-stat-label">Taux d'Occupation</div>
+                        </div>
+                        <div class="screenshot-stat">
+                            <div class="screenshot-stat-value">92,823 EUR</div>
+                            <div class="screenshot-stat-label">Revenu Brut</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="animate-5" style="margin-top: 24px; color: var(--text-secondary); font-size: 15px;">
+                    Ce bien fonctionne en <strong style="color: var(--gold);">Airbnb complet</strong> (avec changement d'usage).<br>
+                    Pour votre bien haut de gamme de 110m2, nous projetons des <strong style="color: var(--green);">revenus superieurs</strong>.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 5: 2026 Projection (Partial Year) -->
+        <div class="slide" data-slide="5">
+            <div class="slide-content">
+                <span class="badge badge-blue animate-1">Projection 2026</span>
+                <h1 class="animate-2">Demarrage <span class="highlight-blue">idealement en Juillet 2026</span></h1>
+                <p class="subtitle animate-3">
+                    Projection sur 6 mois pour le reste de l'annee 2026 (Juillet - Decembre)
+                </p>
+                <div class="card-grid" style="grid-template-columns: 1fr 1fr;">
+                    <div class="year-card animate-4">
+                        <div class="year-title">S2 2026 (6 mois)</div>
+                        <div class="year-value">33,480 EUR</div>
+                        <div class="year-monthly">Mois Airbnb: 10,800+ EUR net</div>
+                        <div class="year-breakdown">
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span class="breakdown-dot orange"></span>
+                                    Airbnb (45 jours)
+                                </div>
+                                <div class="breakdown-value" style="color: var(--orange);">16,200 EUR</div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span class="breakdown-dot cyan"></span>
+                                    Bail Mobilite (4 mois)
+                                </div>
+                                <div class="breakdown-value" style="color: var(--cyan);">17,280 EUR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card animate-5" style="padding: 32px;">
+                        <h3 style="color: var(--gold); margin-bottom: 20px;">Calendrier S2 2026</h3>
+                        <div style="text-align: left; font-size: 15px;">
+                            <div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                                <span><strong style="color: var(--orange);">Juillet</strong></span>
+                                <span>Airbnb (15 jours) + Bail (15 jours)</span>
+                            </div>
+                            <div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                                <span><strong style="color: var(--cyan);">Aout</strong></span>
+                                <span>Bail Mobilite Corporate</span>
+                            </div>
+                            <div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                                <span><strong style="color: var(--orange);">Septembre</strong></span>
+                                <span>Airbnb (Fashion Week + Events)</span>
+                            </div>
+                            <div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                                <span><strong style="color: var(--cyan);">Octobre</strong></span>
+                                <span>Bail Mobilite Corporate</span>
+                            </div>
+                            <div style="padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.1); display: flex; justify-content: space-between;">
+                                <span><strong style="color: var(--cyan);">Novembre</strong></span>
+                                <span>Bail Mobilite Corporate</span>
+                            </div>
+                            <div style="padding: 12px 0; display: flex; justify-content: space-between;">
+                                <span><strong style="color: var(--orange);">Decembre</strong></span>
+                                <span>Airbnb (Fetes de fin d'annee)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: 2027 Full Year Projection -->
+        <div class="slide" data-slide="6">
+            <div class="slide-content">
+                <span class="badge badge-green animate-1">Projection 2027</span>
+                <h1 class="animate-2">Annee Complete <span class="highlight-green">Optimisee</span></h1>
+                <p class="subtitle animate-3">
+                    Strategie complete sur 12 mois avec optimisation maximale des revenus
+                </p>
+                <div class="card-grid" style="grid-template-columns: 1fr; max-width: 700px; margin: 40px auto 0;">
+                    <div class="year-card featured animate-4">
+                        <div class="year-badge">ANNEE COMPLETE</div>
+                        <div class="year-title">Revenu Net Annuel 2027</div>
+                        <div class="year-value">71,280 EUR</div>
+                        <div class="year-monthly">Mois Airbnb: 10,800+ EUR net</div>
+                        <div class="year-breakdown">
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span class="breakdown-dot orange"></span>
+                                    Airbnb Premium (90 jours)
+                                </div>
+                                <div class="breakdown-value" style="color: var(--orange);">32,400 EUR</div>
+                            </div>
+                            <div class="breakdown-item">
+                                <div class="breakdown-label">
+                                    <span class="breakdown-dot cyan"></span>
+                                    Bail Mobilite (9 mois x 4,320 EUR net)
+                                </div>
+                                <div class="breakdown-value" style="color: var(--cyan);">38,880 EUR</div>
+                            </div>
+                            <div class="breakdown-item" style="padding-top: 20px; border-top: 2px solid var(--gold); margin-top: 12px;">
+                                <div class="breakdown-label" style="font-weight: 700; color: var(--gold);">
+                                    Total Annuel Net
+                                </div>
+                                <div class="breakdown-value" style="color: var(--green); font-size: 24px;">71,280 EUR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="guaranteed-badge animate-5">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+                    </svg>
+                    10,800+ EUR Net pendant les mois Airbnb de haute saison
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Monthly Calendar 2027 -->
+        <div class="slide" data-slide="7">
+            <div class="slide-content">
+                <span class="badge animate-1">Calendrier 2027</span>
+                <h1 class="animate-2">Strategie <span class="highlight">Mois par Mois</span></h1>
+                <div class="timeline-enhanced animate-3">
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Janvier</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Fevrier</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Mars</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--orange);">Avril</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar airbnb" style="width: 100%;">30j Airbnb</div>
+                        </div>
+                        <div class="timeline-revenue" style="color: var(--green);">10,800 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--orange);">Mai</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar airbnb" style="width: 100%;">30j Airbnb</div>
+                        </div>
+                        <div class="timeline-revenue" style="color: var(--green);">10,800 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--orange);">Juin</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar airbnb" style="width: 100%;">30j Airbnb</div>
+                        </div>
+                        <div class="timeline-revenue" style="color: var(--green);">10,800 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Juillet</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Aout</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Septembre</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Octobre</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Novembre</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                    <div class="timeline-month">
+                        <div class="timeline-month-name" style="color: var(--cyan);">Decembre</div>
+                        <div class="timeline-bar-container">
+                            <div class="timeline-bar bail" style="width: 100%;">Bail Mobilite</div>
+                        </div>
+                        <div class="timeline-revenue">4,320 EUR</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Pricing Breakdown -->
+        <div class="slide" data-slide="8">
+            <div class="slide-content">
+                <span class="badge animate-1">Details Tarifaires</span>
+                <h1 class="animate-2">Hypotheses de <span class="highlight">Revenus</span></h1>
+                <div class="card-grid animate-3" style="grid-template-columns: 1fr 1fr;">
+                    <div class="card" style="border-color: var(--orange);">
+                        <h3 style="color: var(--orange); margin-bottom: 20px;">Airbnb Premium (90 jours)</h3>
+                        <div style="text-align: left;">
+                            <div style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Tarif Journalier Moyen (ADR)</div>
+                                <div style="font-size: 28px; font-weight: 800; color: var(--orange);">450 EUR / nuit</div>
+                            </div>
+                            <div style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Objectif d'Occupation</div>
+                                <div style="font-size: 28px; font-weight: 800; color: var(--text-primary);">100%</div>
+                            </div>
+                            <div style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Revenu Brut (90 jours)</div>
+                                <div style="font-size: 24px; font-weight: 700;">40,500 EUR</div>
+                            </div>
+                            <div style="padding: 16px 0;">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Net Proprietaire (apres 20% commission)</div>
+                                <div style="font-size: 28px; font-weight: 800; color: var(--green);">32,400 EUR</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card" style="border-color: var(--cyan);">
+                        <h3 style="color: var(--cyan); margin-bottom: 20px;">Bail Mobilite Corporate (9 mois)</h3>
+                        <div style="text-align: left;">
+                            <div style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Loyer Mensuel</div>
+                                <div style="font-size: 28px; font-weight: 800; color: var(--cyan);">4,800 EUR / mois</div>
+                            </div>
+                            <div style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Duree</div>
+                                <div style="font-size: 28px; font-weight: 800; color: var(--text-primary);">9 mois</div>
+                            </div>
+                            <div style="padding: 16px 0; border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Revenu Total</div>
+                                <div style="font-size: 24px; font-weight: 700;">43,200 EUR</div>
+                            </div>
+                            <div style="padding: 16px 0;">
+                                <div style="color: var(--text-secondary); font-size: 14px;">Net Proprietaire (apres 10% commission)</div>
+                                <div style="font-size: 28px; font-weight: 800; color: var(--green);">38,880 EUR</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="animate-4" style="margin-top: 32px; color: var(--text-secondary);">
+                    Structure de commission: <strong style="color: var(--orange);">20% sur Airbnb</strong> | <strong style="color: var(--cyan);">10% sur Bail Mobilite</strong>
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 9: Comparison -->
+        <div class="slide" data-slide="9">
+            <div class="slide-content">
+                <span class="badge animate-1">Comparaison</span>
+                <h1 class="animate-2">La Difference est <span class="highlight-green">Significative</span></h1>
+                <div class="stats-grid animate-3" style="margin-top: 48px; grid-template-columns: repeat(3, 1fr);">
+                    <div class="stat-card" style="border-color: rgba(239, 68, 68, 0.3);">
+                        <div class="stat-value" style="color: var(--text-secondary); font-size: 36px;">2,800 EUR</div>
+                        <div class="stat-label">Location Longue Duree</div>
+                        <p style="margin-top: 16px; color: var(--text-secondary); font-size: 14px;">Encadrement loyers<br>33,600 EUR/an</p>
+                    </div>
+                    <div class="stat-card" style="border-color: rgba(6, 182, 212, 0.3);">
+                        <div class="stat-value" style="color: var(--cyan); font-size: 36px;">4,320 EUR</div>
+                        <div class="stat-label">Bail Mobilite Seul</div>
+                        <p style="margin-top: 16px; color: var(--text-secondary); font-size: 14px;">Corporate standard<br>51,840 EUR/an</p>
+                    </div>
+                    <div class="stat-card green" style="border-color: rgba(34, 197, 94, 0.5);">
+                        <div class="stat-value green" style="font-size: 36px;">10,800 EUR</div>
+                        <div class="stat-label">Mois Airbnb (Haute Saison)</div>
+                        <p style="margin-top: 16px; color: var(--text-secondary); font-size: 14px;">Strategie Mixte<br>71,280 EUR/an</p>
+                    </div>
+                </div>
+                <div class="animate-4" style="margin-top: 40px; padding: 24px 40px; background: linear-gradient(135deg, rgba(34, 197, 94, 0.15), rgba(34, 197, 94, 0.05)); border-radius: 16px; display: inline-block;">
+                    <span style="font-size: 32px; font-weight: 900; color: var(--green);">2.1x Plus de Revenus</span>
+                    <span style="display: block; color: var(--text-secondary); margin-top: 8px; font-size: 16px;">vs. location traditionnelle longue duree</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Our Services -->
+        <div class="slide" data-slide="10">
+            <div class="slide-content">
+                <span class="badge animate-1">Nos Services</span>
+                <h1 class="animate-2">Gestion <span class="highlight">Complete</span></h1>
+                <p class="subtitle animate-3">
+                    Vous recevez vos revenus locatifs. Nous gerons tout le reste.
+                </p>
+                <div class="services-grid">
+                    <div class="service-item animate-4">
+                        <div class="service-icon">📸</div>
+                        <div>
+                            <div class="service-title">Photographie Professionnelle</div>
+                            <div class="service-desc">Visuels haut de gamme, visites virtuelles, annonces optimisees sur toutes les plateformes</div>
+                        </div>
+                    </div>
+                    <div class="service-item animate-4">
+                        <div class="service-icon">📈</div>
+                        <div>
+                            <div class="service-title">Tarification Dynamique</div>
+                            <div class="service-desc">Ajustements IA bases sur les evenements, la saisonalite et la demande</div>
+                        </div>
+                    </div>
+                    <div class="service-item animate-5">
+                        <div class="service-icon">💬</div>
+                        <div>
+                            <div class="service-title">Support Voyageurs 24/7</div>
+                            <div class="service-desc">Reponses instantanees, services conciergerie, gestion des avis</div>
+                        </div>
+                    </div>
+                    <div class="service-item animate-5">
+                        <div class="service-icon">🔑</div>
+                        <div>
+                            <div class="service-title">Check-in / Check-out</div>
+                            <div class="service-desc">Serrures connectees, accueil des voyageurs, inspection du bien apres chaque sejour</div>
+                        </div>
+                    </div>
+                    <div class="service-item animate-6">
+                        <div class="service-icon">🧹</div>
+                        <div>
+                            <div class="service-title">Menage Premium</div>
+                            <div class="service-desc">Nettoyage standard hotelier, linge de luxe, reapprovisionnement des amenites</div>
+                        </div>
+                    </div>
+                    <div class="service-item animate-6">
+                        <div class="service-icon">🏢</div>
+                        <div>
+                            <div class="service-title">Sourcing Locataires Corporate</div>
+                            <div class="service-desc">Reseau cadres, agences relocation, clients corporate verifies</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Fee Structure -->
+        <div class="slide" data-slide="11">
+            <div class="slide-content">
+                <span class="badge animate-1">Structure Tarifaire</span>
+                <h1 class="animate-2">Tarification <span class="highlight">Transparente</span></h1>
+                <div class="card-grid animate-3" style="grid-template-columns: 1fr 1fr; max-width: 900px; margin: 40px auto 0;">
+                    <div class="card" style="text-align: center; padding: 40px; border-color: var(--orange);">
+                        <h3 style="color: var(--orange);">Gestion Airbnb</h3>
+                        <div style="font-size: 56px; font-weight: 900; color: var(--orange); margin: 24px 0;">20%</div>
+                        <p style="color: var(--text-secondary); font-size: 15px;">
+                            Commission sur revenus locatifs bruts<br><br>
+                            Inclut tous les services:<br>
+                            Photographie, pricing, gestion voyageurs,<br>
+                            coordination menage, maintenance
+                        </p>
+                    </div>
+                    <div class="card" style="text-align: center; padding: 40px; border-color: var(--cyan);">
+                        <h3 style="color: var(--cyan);">Bail Mobilite</h3>
+                        <div style="font-size: 56px; font-weight: 900; color: var(--cyan); margin: 24px 0;">10%</div>
+                        <p style="color: var(--text-secondary); font-size: 15px;">
+                            Commission sur loyer mensuel<br><br>
+                            Inclut tous les services:<br>
+                            Sourcing locataire, gestion contrat,<br>
+                            etat des lieux, support continu
+                        </p>
+                    </div>
+                </div>
+                <p class="animate-4" style="margin-top: 32px; color: var(--green); font-weight: 600; font-size: 18px;">
+                    Aucun frais cache. Aucun frais de mise en place. Vous ne payez que lorsque vous gagnez.
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Summary -->
+        <div class="slide" data-slide="12">
+            <div class="slide-content">
+                <span class="badge badge-green animate-1">Resume</span>
+                <h1 class="animate-2">Votre <span class="highlight-green">Projection de Revenus</span></h1>
+                <div class="card-grid animate-3" style="grid-template-columns: 1fr 1fr; gap: 32px; max-width: 900px; margin: 40px auto 0;">
+                    <div class="stat-card blue">
+                        <div style="font-size: 18px; color: var(--text-secondary); margin-bottom: 8px;">S2 2026 (6 mois)</div>
+                        <div class="stat-value blue" style="font-size: 48px;">33,480 EUR</div>
+                        <div style="font-size: 16px; color: var(--green); font-weight: 700; margin-top: 8px;">Mois Airbnb: 10,800+ EUR</div>
+                    </div>
+                    <div class="stat-card green">
+                        <div style="font-size: 18px; color: var(--text-secondary); margin-bottom: 8px;">Annee Complete 2027</div>
+                        <div class="stat-value green" style="font-size: 48px;">71,280 EUR</div>
+                        <div style="font-size: 16px; color: var(--green); font-weight: 700; margin-top: 8px;">Mois Airbnb: 10,800 EUR</div>
+                    </div>
+                </div>
+                <div class="animate-4" style="margin-top: 40px; padding: 32px; background: var(--bg-secondary); border-radius: 16px; border: 2px solid var(--gold); max-width: 800px; margin-left: auto; margin-right: auto;">
+                    <div style="font-size: 20px; color: var(--text-secondary); margin-bottom: 8px;">Total sur 18 Mois (Juillet 2026 - Dec 2027)</div>
+                    <div class="big-number" style="font-size: 64px;">104,760 EUR</div>
+                    <div style="font-size: 18px; color: var(--gold); font-weight: 600; margin-top: 8px;">Revenu Net Proprietaire</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Next Steps -->
+        <div class="slide" data-slide="13">
+            <div class="slide-content">
+                <span class="badge animate-1">Prochaines Etapes</span>
+                <h1 class="animate-2">Comment <span class="highlight-blue">Demarrer</span></h1>
+                <div class="timeline">
+                    <div class="timeline-item animate-3">
+                        <div class="timeline-number">1</div>
+                        <div class="timeline-text">
+                            <div class="timeline-title">Signature Contrat</div>
+                            <div class="timeline-desc">Revue et signature du mandat de gestion</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-4">
+                        <div class="timeline-number">2</div>
+                        <div class="timeline-text">
+                            <div class="timeline-title">Onboarding</div>
+                            <div class="timeline-desc">Setup du bien, photographie, creation annonces</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-5">
+                        <div class="timeline-number">3</div>
+                        <div class="timeline-text">
+                            <div class="timeline-title">Mise en Ligne</div>
+                            <div class="timeline-desc">Lancement sur Airbnb + canaux corporate</div>
+                        </div>
+                    </div>
+                    <div class="timeline-item animate-6">
+                        <div class="timeline-number">4</div>
+                        <div class="timeline-text">
+                            <div class="timeline-title">Premiers Revenus</div>
+                            <div class="timeline-desc">Reception de votre premier paiement sous 30 jours</div>
+                        </div>
+                    </div>
+                </div>
+                <p class="animate-6" style="margin-top: 48px; color: var(--text-secondary); font-size: 18px;">
+                    Date de demarrage cible: <strong style="color: var(--gold);">idealement en Juillet 2026</strong><br>
+                    <span style="font-size: 15px;">L'onboarding prend environ 2 semaines</span>
+                </p>
+            </div>
+        </div>
+
+        <!-- Slide 14: CTA -->
+        <div class="slide" data-slide="14">
+            <div class="slide-content">
+                <span class="badge animate-1">Passons a l'Action</span>
+                <h1 class="hero-title animate-2">Pret a Gagner<br>5,940 EUR / Mois ?</h1>
+                <p class="subtitle animate-3">
+                    Consultez votre email pour tous les documents et ressources.<br>
+                    Je suis disponible pour repondre a toutes vos questions.
+                </p>
+                <a href="https://calendly.com/contactoptgroup" target="_blank" class="cta-button animate-4">
+                    <span>Planifier un Appel de Suivi</span>
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24">
+                        <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+                <div class="contact-info animate-5">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <span>contactoptgroup@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <span>+33 6 12 78 49 32</span>
+                    </div>
+                </div>
+                <p class="animate-6" style="margin-top: 40px; color: var(--text-secondary); font-size: 15px;">
+                    <strong style="color: var(--gold);">Jean-Marc Taouo</strong> — OPT IM GROUP<br>
+                    <span style="font-size: 13px; opacity: 0.7;">Gestion de 200+ proprietes a Paris</span>
+                </p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-fixed">
+        <button class="nav-btn" id="prevBtn" disabled>
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M15 19l-7-7 7-7"/>
+            </svg>
+        </button>
+        <button class="nav-btn" id="nextBtn">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M9 5l7 7-7 7"/>
+            </svg>
+        </button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        let currentSlide = 1;
+
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const progressBar = document.getElementById('progressBar');
+        const currentSlideEl = document.getElementById('currentSlide');
+        const totalSlidesEl = document.getElementById('totalSlides');
+
+        totalSlidesEl.textContent = totalSlides.toString().padStart(2, '0');
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.toggle('active', index === currentSlide - 1);
+            });
+
+            currentSlideEl.textContent = currentSlide.toString().padStart(2, '0');
+            progressBar.style.width = `${(currentSlide / totalSlides) * 100}%`;
+
+            prevBtn.disabled = currentSlide === 1;
+            nextBtn.disabled = currentSlide === totalSlides;
+        }
+
+        function nextSlide() {
+            if (currentSlide < totalSlides) {
+                currentSlide++;
+                updateSlide();
+            }
+        }
+
+        function prevSlide() {
+            if (currentSlide > 1) {
+                currentSlide--;
+                updateSlide();
+            }
+        }
+
+        nextBtn.addEventListener('click', nextSlide);
+        prevBtn.addEventListener('click', prevSlide);
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (e.target.closest('.nav-btn') || e.target.closest('.cta-button') || e.target.closest('a')) return;
+
+            const x = e.clientX;
+            const width = window.innerWidth;
+
+            if (x > width * 0.6) {
+                nextSlide();
+            } else if (x < width * 0.4) {
+                prevSlide();
+            }
+        });
+
+        let touchStartX = 0;
+        let touchEndX = 0;
+
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        document.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const threshold = 50;
+            const diff = touchStartX - touchEndX;
+
+            if (Math.abs(diff) > threshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
+
+        updateSlide();
+    </script>
+</body>
+</html>
